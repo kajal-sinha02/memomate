@@ -28,7 +28,7 @@ const Signup = ({ showAlert }) => {
       return;
     }
 
-    const response = await fetch(`https://memomate-g2ic.onrender.com/api/auth/createuser`, {
+    const response = await fetch(`https://memomate-backend.onrender.com/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

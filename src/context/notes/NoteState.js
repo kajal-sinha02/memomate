@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
-  const host = "https://inote.onrender.com";
+  const host = "https://memomate-backend-e0s4.onrender.com/";
   const notesInitial = [];
 
   const [notes, setNotes] = useState(notesInitial);
