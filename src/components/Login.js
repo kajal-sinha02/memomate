@@ -110,9 +110,10 @@ const Login = (props) => {
         </button>
       </form>
       <div className="text-center text-white mt-4">
-        <a href="/forgot-password" className="text-blue-500 hover:underline">
-          Forgot Password?
-        </a>
+      
+          <Link className="text-blue-500 hover:underline" to="/forgot-password">Forgot Password?</Link>
+          
+ 
       </div>
     </div>
     </div>
