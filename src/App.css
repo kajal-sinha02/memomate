@@ -38,7 +38,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 .bg-dark-custom {
   /* background: linear-gradient(45deg, #374151, #000000); */
   background: linear-gradient(45deg, #000000, #000000);
@@ -53,3 +53,19 @@
     background-position: 100% 50%;
   }
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the distance you want it to move */
+  }
+}
+
+@keyframes brightness {
+  0% { filter: brightness(100%); }
+  50% { filter: brightness(110%); }
+  100% { filter: brightness(100%); }
+}
+

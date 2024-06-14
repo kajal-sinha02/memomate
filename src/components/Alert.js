@@ -5,7 +5,8 @@ const Alert = (props) => {
   return (
     <>
     {alert && (
-      <div className={`alert alert-${alert.type}`} role="alert">
+      // <div className={`alert alert-${alert.type}`} role="alert">
+        <div className={`alert alert-dark`} role="alert">
         {alert.msg}    
       </div>
     )}
