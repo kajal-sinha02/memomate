@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState , useReducer , useEffect} from "react";
 import NoteContext from "./noteContext";
+import noteReducer from "./noteReducer";
 
 const NoteState = (props) => {
   const host = "https://memomate-backend-jid4.onrender.com";
@@ -10,16 +11,30 @@ const NoteState = (props) => {
 
   //get all notes
 
+
+ 
+
+
   const getnotes= async (e) => {
-    const response = await fetch(`${host}/api/notes/fetchallnotes`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "auth-token":localStorage.getItem('token'),
+    try {
+      const authToken = localStorage.getItem("token");
+      const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": authToken,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch notes: ${response.status}`);
       }
-    });
-    const json =await response.json() ;
-    setNotes(json)  
+
+      const data = await response.json();
+      setNotes(data);
+    } catch (error) {
+      console.error("Error fetching notes:", error);
+    }
   };
   //Add a note
 
@@ -188,11 +203,18 @@ const NoteState = (props) => {
     }
   };
   
-
+  const resetNotes = () => {
+    setNotes([]);
+  };
   
+  useEffect(() => {
+    getnotes(); // Fetch notes when the component mounts
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
 
   return (
-    <NoteContext.Provider value={{ notes, addnote, deletenote, editnote ,getnotes}}>
+    <NoteContext.Provider value={{ notes, addnote, deletenote, editnote ,getnotes , resetNotes }}>
       {props.children}
     </NoteContext.Provider>
   );
