@@ -32,9 +32,10 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 text-white py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-4" style={BricolageGrotesque}>
-            MEMOMATE
-          </h2>
+        <h2 className="text-5xl md:text-6xl font-bold mb-4" style={BricolageGrotesque}>
+  MEMOMATE
+</h2>
+
           <p className="text-xl mb-8">
             
             Your ultimate solution for organizing and managing notes
