@@ -16,7 +16,7 @@ const Noteitem = (props) => {
 
   return (
     <div className="col-md-4">
-      <div className="card shadow-sm mb-4" style={{ background: "linear-gradient(to right, #4a5568, #2d3748)", color: "white" }}>
+     <div className="card shadow-sm mb-4" style={{ background: "#000", border: "1px solid #c0c0c0", color: "white" }}>
         <div className="card-body">
           <h5 className="card-title mb-3" style={{ fontSize: "1.25rem" }}>{note.title}</h5>
           <p className="card-text" style={{ fontSize: "1rem" }}>{note.description}</p>

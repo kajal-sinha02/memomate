@@ -35,12 +35,13 @@ const Notes = (props) => {
     if(localStorage.getItem('token') !== null){
       getnotes();
     }else{
-      navigate('/login');
+      navigate('/about');
     }
   });
 
   return (
-    <>
+    <div className="container">
+
       <AddNote></AddNote>
 
       <button  ref = {ref}
@@ -59,18 +60,20 @@ const Notes = (props) => {
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog">
-          <div className="modal-content bg-gray-900 text-white">
-            <div className="modal-header border-b border-gray-700">
+       <div className="modal-dialog">
+  <div className="modal-content bg-black text-white border border-silver">
+    <div className="modal-header border-b border-silver">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
                 Edit Note
               </h1>
               <button
-                type="button"
-                className="btn-close text-white"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              type="button"
+              className="btn-close text-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              color="white"
+            ></button>
+
             </div>
             <div className="modal-body">
               <form>
@@ -120,7 +123,7 @@ const Notes = (props) => {
               <button
                 ref={refClose}
                 type="button"
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-light"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -146,7 +149,7 @@ const Notes = (props) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

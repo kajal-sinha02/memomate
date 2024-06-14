@@ -55,12 +55,13 @@ const Login = (props) => {
 
   return (
     <>
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <div className="w-full max-w-sm mx-auto px-4 py-8 bg-gray-800 rounded-md shadow-md">
+    <div className="min-h-screen bg-black text-gray-100 flex justify-center items-center">
+    
+    <div className="w-full max-w-sm mx-auto px-4 py-8 bg-black border border-silver rounded-md shadow-md">
       
       <h2
         className="text-center text-white text-2xl mb-6"
-        style={paragraphStyle}
+        
       >
         LOGIN
       </h2>
