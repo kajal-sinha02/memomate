@@ -32,7 +32,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/memomate-frontend.git
+git clone https://github.com/kajal-sinha02/memomate.git
 cd memomate-frontend
 Install frontend dependencies:
 
